@@ -1,0 +1,51 @@
+
+.singin-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f6f6f6;
+    padding: 20px;
+}
+
+
+.logo{
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+
+
+.input{
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button {
+    padding: 15px;
+    margin: 20px 0;
+    width: 100%;
+    background-color: #FFCB05;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #FFB800;
+}

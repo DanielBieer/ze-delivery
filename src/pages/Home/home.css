@@ -1,0 +1,11 @@
+.lista-categorias {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.content{
+    background-color: white;
+    color: black;
+}
