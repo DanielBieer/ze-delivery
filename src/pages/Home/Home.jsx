@@ -1,10 +1,26 @@
 // import { Link } from "react-router-dom"
 
+import { useEffect, useState } from "react"
 import CategoriaProduto from "../../components/CategoriaProduto/CategoriaProduto"
 import Header from "../../components/Header/Header"
 import Hero from "../../components/Hero/Hero"
 import './home.css'
+import AgeVerificationModal from "../../components/Modal/AgeVerificationModal"
 function Home() {
+    const [showModal, setShowModal] = useState(true)
+
+    useEffect(() => {
+        const hasSeenModal = localStorage.getItem('hasSeenModal')
+        if(hasSeenModal){
+            setShowModal(false)
+        }
+    }, [])
+
+    const handleCloseModal = () => {
+        localStorage.setItem('hasSeenModal', 'true')
+        setShowModal(false)
+    }
+
     const CATEGORIAS = [
         {
             id: 1,
@@ -40,6 +56,7 @@ function Home() {
     
     return (
         <>
+        {showModal && <AgeVerificationModal onClose={handleCloseModal}/>}
             <div className="content">
                 <Header/>           
                 <Hero/>
